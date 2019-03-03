@@ -1,6 +1,14 @@
 # google-analytics-injector
 Inject Google Analytics Tracking Snippet
 
+## Installation
+
+Install `google-analytics-injector` command as follows.
+
+```bash
+npm i -g google-analytics-injector
+```
+
 ## Usage
 
 Suppose your have `myfile.html` as follows.
