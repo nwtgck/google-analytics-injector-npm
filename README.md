@@ -29,7 +29,7 @@ google-analytics-injector -t UA-XXXXX-Y myfile.html
 Then, you have injected `myfile.html` as follows.
 
 ```html
-<html><head><!-- Google Analytics -->
+<!-- myfile.html --><html><head><!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,7 +40,7 @@ ga('create', 'UA-XXXXX-Y', 'auto');
 ga('send', 'pageview');
 </script>
 <!-- End Google Analytics --></head><body>
-  <h1>My File</h1>
+<h1>My File</h1>
 </body></html>
 ```
 
