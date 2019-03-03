@@ -32,8 +32,10 @@ function injectRecursively(fileOrDirPath: string): void {
   if (stat.isFile()) {
     const filePath = fileOrDirPath;
     detectFileType.fromFile(filePath, (err: Error, filetype: any)=>{
+      // Get extension
+      const ext = path.extname(fileOrDirPath);
       // If file is HTML
-      if (err === null && filetype !== null && filetype.mime === "text/html") {
+      if (ext === ".html" || err === null && filetype !== null && filetype.mime === "text/html") {
         const html = fs.readFileSync(filePath).toString("UTF-8");
         // Get injected HTML
         const injectedHtml = googleAnalyticsInjector.injectedHtml(html, trackingId);
