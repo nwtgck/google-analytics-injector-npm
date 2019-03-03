@@ -18,8 +18,9 @@ ga('send', 'pageview');
 
 export function injectedHtml(html: string, trackingId: string): string {
   const cheerioStatic = cheerio.load(html);
-  const gaHtml = getGaHtml(trackingId)
-  cheerioStatic('html > head').html(gaHtml);
+  const gaHtml = getGaHtml(trackingId);
+  const headHtml = cheerioStatic('html > head').html();
+  cheerioStatic('html > head').html(headHtml + gaHtml);
 
   return cheerioStatic.html();
 }
