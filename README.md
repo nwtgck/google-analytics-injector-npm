@@ -43,3 +43,11 @@ ga('send', 'pageview');
   <h1>My File</h1>
 </body></html>
 ```
+
+### Inject recursively
+
+Suupose `mydist` is a directory which contains .html files. The files injected recursively. 
+
+```bash
+google-analytics-injector -t UA-XXXXX-Y ./mydist/
+```
