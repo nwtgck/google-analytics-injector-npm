@@ -1,4 +1,6 @@
 # google-analytics-injector
+[![CircleCI](https://circleci.com/gh/nwtgck/google-analytics-injector-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/google-analytics-injector-npm)
+
 Inject Google Analytics Tracking Snippet
 
 ## Installation
