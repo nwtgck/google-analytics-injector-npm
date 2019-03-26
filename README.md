@@ -1,5 +1,5 @@
 # google-analytics-injector
-[![CircleCI](https://circleci.com/gh/nwtgck/google-analytics-injector-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/google-analytics-injector-npm)
+[![npm](https://img.shields.io/npm/v/google-analytics-injector.svg)](https://www.npmjs.com/package/google-analytics-injector) [![CircleCI](https://circleci.com/gh/nwtgck/google-analytics-injector-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/google-analytics-injector-npm)
 
 Inject Google Analytics Tracking Snippet
 
