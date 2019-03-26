@@ -1,0 +1,74 @@
+ANCHORS:
+ node_steps: &node_steps
+   steps:
+     - checkout
+     - run: npm install
+      # Check whether "run build" is successful
+     - run: npm run build
+     - run: npm test
+     - run:
+        name: Working test for command options and installation test
+        command: |
+          set -xeu
+          project_dir=$PWD
+          cd /tmp
+          # Install bin
+          npm install -D $project_dir
+          # Create myfile.html
+          cat > myfile.html <<EOS
+          <!-- myfile.html -->
+          <body>
+            <h1>My File</h1>
+          </body>
+          EOS
+          # Inject GA code into myfile
+          ./node_modules/.bin/google-analytics-injector -t UA-XXXXX-Y myfile.html
+          # Print the injected HTML
+          cat myfile.html
+
+
+version: 2
+jobs:
+  node_10:
+    docker:
+      - image: circleci/node:10
+    <<: *node_steps
+
+  node_8:
+    docker:
+      - image: circleci/node:8
+    <<: *node_steps
+
+  # (from: https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/)
+  npm_publish:
+    docker:
+    - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run:
+          name: Authenticate with registry
+          command: echo -e "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run: npm publish
+
+workflows:
+  version: 2
+  node_tests:
+    jobs:
+      - node_10:
+          filters:
+            tags:
+              only: /.*/
+      - node_8:
+          filters:
+            tags:
+              only: /.*/
+      - npm_publish:
+          requires:
+            - node_10
+            - node_8
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
