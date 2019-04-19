@@ -1,6 +1,6 @@
 {
   "name": "google-analytics-injector",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Inject Google Analytics Tracking Snippet",
   "bin": {
     "google-analytics-injector": "dist/src/index.js"
@@ -28,7 +28,7 @@
     "@types/mocha": "^5.0.0",
     "@types/node": "^11.10.4",
     "@types/power-assert": "^1.5.0",
-    "@types/yargs": "^12.0.9",
+    "@types/yargs": "^13.0.0",
     "espower-typescript": "^9.0.0",
     "mocha": "^6.0.2",
     "power-assert": "^1.4.4",
