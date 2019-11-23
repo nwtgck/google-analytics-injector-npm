@@ -24,20 +24,20 @@
   "author": "Ryo Ota",
   "license": "MIT",
   "devDependencies": {
-    "@types/cheerio": "^0.22.10",
-    "@types/mocha": "^5.0.0",
-    "@types/node": "^11.10.4",
+    "@types/cheerio": "^0.22.14",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^11.15.2",
     "@types/power-assert": "^1.5.0",
-    "@types/yargs": "^13.0.0",
-    "espower-typescript": "^9.0.0",
-    "mocha": "^6.0.2",
-    "power-assert": "^1.4.4",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.0.1"
+    "@types/yargs": "^13.0.3",
+    "espower-typescript": "^9.0.2",
+    "mocha": "^6.2.2",
+    "power-assert": "^1.6.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "detect-file-type": "^0.2.0",
-    "yargs": "^14.0.0"
+    "cheerio": "^1.0.0-rc.3",
+    "detect-file-type": "^0.2.7",
+    "yargs": "^14.2.2"
   }
 }
