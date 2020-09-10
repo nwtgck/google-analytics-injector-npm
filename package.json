@@ -38,6 +38,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "detect-file-type": "^0.2.7",
-    "yargs": "^15.0.2"
+    "yargs": "^16.0.2"
   }
 }
