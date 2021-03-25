@@ -28,7 +28,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^11.15.2",
     "@types/power-assert": "^1.5.0",
-    "@types/yargs": "^13.0.3",
+    "@types/yargs": "^16.0.1",
     "espower-typescript": "^9.0.2",
     "mocha": "^6.2.2",
     "power-assert": "^1.6.1",
